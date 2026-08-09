@@ -4,6 +4,7 @@ MRI*.pdf
 
 # Generated PDFs are reproducible from Markdown.
 output/pdf/*.pdf
+!output/pdf/mri_full_course_formula_sheet.pdf
 output/pdf/week1_formula_sheet.md
 
 # Extraction/rendering scratch files derived from course PDFs.
@@ -27,4 +28,3 @@ dist/
 .DS_Store
 output/.DS_Store
 output/pdf/.DS_Store
-
