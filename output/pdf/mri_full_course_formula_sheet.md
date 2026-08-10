@@ -87,7 +87,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **Matrix model:** <font color="#B00020">s = Eρ + η</font> - Encoding plus noise.
 - **Decode:** i = Fs,  F E = I (ideal) - E is not directly invertible.
 - **Pseudoinverse:** <font color="#B00020">F=(E<sup>H</sup>E)<sup>-1</sup>E<sup>H</sup></font> - Noise ignored.
-- **SENSE:** ρ̂=(E<sup>H</sup>Ψ<sup>-1</sup>E)<sup>-1</sup>E<sup>H</sup>Ψ<sup>-1</sup>s - Optimum SNR inverse.
+- **SENSE:** ρ̂=(E<sup>H</sup>Ψ<sup>-1</sup>E)<sup>-1</sup>E<sup>H</sup>Ψ<sup>-1</sup>s - Accounts for non-independent coil noise.
 - **Regularized:** ρ̂=(E<sup>H</sup>Ψ<sup>-1</sup>E+λI)<sup>-1</sup>E<sup>H</sup>Ψ<sup>-1</sup>s - Stabilizes ill-conditioning.
 
 ### Parallel Limits
