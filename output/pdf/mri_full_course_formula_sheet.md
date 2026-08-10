@@ -45,7 +45,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **Loop field:** <font color="#B00020">B<sub>z</sub>(z)=μ<sub>0</sub>I r<sup>2</sup>/(2(r<sup>2</sup>+z<sup>2</sup>)<sup>3/2</sup>)</font> - Circular current loop.
 - **Linear field:** <font color="#B00020">ΔB<sub>z</sub>(x)=G<sub>x</sub> x</font> - Constant slope.
 - **Frequency:** ω(r)=γ(B<sub>0</sub>+G r) - Position dependent.
-- **Readout:** ω(x)=γG<sub>x</sub> x - Frequency encoding.
+- **Readout:** Δω(x)=γG<sub>x</sub> x - Frequency encoding.
 - **Phase:** φ(y)=γG<sub>y</sub> y T<sub>y</sub> - Phase encoding.
 - **K-space:** <font color="#B00020">k(t)=γ∫G(t)dt</font> - Constant G: k=γGt.
 
