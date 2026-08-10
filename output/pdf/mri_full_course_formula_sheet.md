@@ -82,7 +82,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 - **Coil signal:** s<sub>γ</sub>(k)=∫ρ(x)c<sub>γ</sub>(x) exp(ikx) dx - Sensitivity cγ.
 - **Matrix model:** <font color="#B00020">s = Eρ + η</font> - Encoding plus noise.
-- **Decode:** i = Fs - Reconstruction matrix.
+- **Decode:** i = Fs,  F E = I - Ideal reconstruction gives identity response.
 - **SENSE:** ρ̂=(E<sup>H</sup>Ψ<sup>-1</sup>E)<sup>-1</sup>E<sup>H</sup>Ψ<sup>-1</sup>s - Optimum SNR inverse.
 - **Regularized:** ρ̂=(E<sup>H</sup>Ψ<sup>-1</sup>E+λI)<sup>-1</sup>E<sup>H</sup>Ψ<sup>-1</sup>s - Stabilizes ill-conditioning.
 
