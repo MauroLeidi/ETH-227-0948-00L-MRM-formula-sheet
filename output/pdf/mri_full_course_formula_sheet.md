@@ -105,6 +105,8 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **After 90°:** M<sub>z</sub>(t)=M<sub>0</sub>[1-exp(-t/T<sub>1</sub>)] - Mz(0)=0.
 - **T2 decay:** M<sub>xy</sub>(t)=M<sub>xy</sub>(0)exp(-t/T<sub>2</sub>) - Spin-spin.
 - **T2* decay:** M<sub>xy</sub>(t)=M<sub>xy</sub>(0)exp(-t/T<sub>2</sub>*) - GRE/FID.
+- **Dipolar T1:** <font color="#B00020">1/T<sub>1</sub>=[6ℏ<sup>2</sup>γ<sup>4</sup>/(20r<sup>6</sup>)][J(ω)+4J(2ω)]</font> - Two spins at distance r.
+- **Dipolar T2:** <font color="#B00020">1/T<sub>2</sub>=[3ℏ<sup>2</sup>γ<sup>4</sup>/(20r<sup>6</sup>)][3J(0)+5J(ω)+2J(2ω)]</font> - Includes static term J(0).
 
 ### Analytical Description
 
