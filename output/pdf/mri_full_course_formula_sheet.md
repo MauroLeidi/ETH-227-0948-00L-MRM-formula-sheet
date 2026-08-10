@@ -84,6 +84,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Coil Encoding
 
 - **Coil signal:** s<sub>γ</sub>(k)=∫ρ(x)c<sub>γ</sub>(x) exp(ikx) dx - Sensitivity cγ.
+- **Coil sens.:** <font color="#B00020">C(r)∝B<sub>1</sub>(r),  B(r)=μ<sub>0</sub>I/(4π)∫dℓ×(r-r')/|r-r'|<sup>3</sup></font> - Biot-Savart law.
 - **Matrix model:** <font color="#B00020">s = Eρ + η</font> - Encoding plus noise.
 - **Decode:** i = Fs,  F E = I (ideal) - E is not directly invertible.
 - **Pseudoinverse:** <font color="#B00020">F=(E<sup>H</sup>E)<sup>-1</sup>E<sup>H</sup></font> - Noise ignored.
@@ -136,7 +137,6 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Signal And Noise
 
 - **Signal voltage:** <font color="#B00020">U<sub>sig</sub>(x)=ωM<sub>xy</sub>(x)C(x)ΔV</font> - Receive sensitivity C.
-- **Noise power:** P=σ|E|<sup>2</sup>ΔV - Sample losses.
 - **Noise variance:** <font color="#B00020">Ψ<sub>U</sub>=4k<sub>B</sub>BW(T<sub>s</sub>R<sub>s</sub>+T<sub>c</sub>R<sub>c</sub>)</font> - U<sub>noise</sub> variance; s=sample, c=coil.
 - **SNR:** <font color="#B00020">SNR=U<sub>signal</sub>/√Ψ<sub>U</sub>=ωM<sub>xy</sub>CΔV√N<sub>avg</sub>/√[4k<sub>B</sub>BW(T<sub>s</sub>R<sub>s</sub>+T<sub>c</sub>R<sub>c</sub>)]</font> - Full voltage-noise form.
 - **SNR scaling:** SNR∝ΔV√NSA/√BW - Resolution/speed tradeoff.
