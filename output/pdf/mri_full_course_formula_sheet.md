@@ -73,6 +73,9 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Speed, SNR, Resolution
 
 - **Voxel:** ΔV=ΔxΔyΔz - Voxel volume.
+- **Signal:** <font color="#B00020">u<sub>S</sub>(t)∝ω<sub>0</sub>μ<sub>0</sub>ρ γ<sup>2</sup>ℏ<sup>2</sup>B<sub>0</sub>/(4k<sub>B</sub>T)</font> - Induced voltage.
+- **Noise std.:** <font color="#B00020">ψ<sub>u</sub>∝γB<sub>0</sub></font> - Receive noise scale.
+- **SNR physical:** <font color="#B00020">SNR=u<sub>S</sub>/ψ<sub>u</sub>∝γ<sup>2</sup>B<sub>0</sub>η∝ΔV√t</font> - Field, coil, voxel, time.
 - **SNR scaling:** <font color="#B00020">SNR ∝ ΔV√T<sub>scan</sub>/√BW</font> - Core tradeoff.
 - **Averages:** SNR ∝ √NSA - Repeated scans.
 - **Acceleration:** T<sub>scan,R</sub>≈T<sub>scan</sub>/R - Undersampling.
