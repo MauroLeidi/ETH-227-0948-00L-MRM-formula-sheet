@@ -137,7 +137,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Signal And Noise
 
 - **Signal voltage:** <font color="#B00020">U<sub>sig</sub>(x)=ωM<sub>xy</sub>(x)C(x)ΔV</font> - Receive sensitivity C.
-- **Noise variance:** <font color="#B00020">Ψ<sub>U</sub>=4k<sub>B</sub>BW(T<sub>s</sub>R<sub>s</sub>+T<sub>c</sub>R<sub>c</sub>)</font> - U<sub>noise</sub> variance; s=sample, c=coil.
+- **Noise variance:** <font color="#B00020">Ψ<sub>U</sub>=4k<sub>B</sub>BW(T<sub>s</sub>R<sub>s</sub>+T<sub>c</sub>R<sub>c</sub>)</font> - U<sub>noise</sub> variance; coil term small except tiny coils.
 - **SNR:** <font color="#B00020">SNR=U<sub>signal</sub>/√Ψ<sub>U</sub>=ωM<sub>xy</sub>CΔV√N<sub>avg</sub>/√[4k<sub>B</sub>BW(T<sub>s</sub>R<sub>s</sub>+T<sub>c</sub>R<sub>c</sub>)]</font> - Full voltage-noise form.
 - **SNR scaling:** SNR∝ΔV√NSA/√BW - Resolution/speed tradeoff.
 
