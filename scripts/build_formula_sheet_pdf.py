@@ -28,6 +28,7 @@ from reportlab.platypus import (
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MD = ROOT / "output" / "pdf" / "mri_full_course_formula_sheet.md"
 DEFAULT_PDF = ROOT / "output" / "pdf" / "mri_full_course_formula_sheet.pdf"
+RED = "#B00020"
 FONT_PATHS = [
     "/Library/Fonts/Arial Unicode.ttf",
     "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
@@ -52,6 +53,8 @@ def html_escape(text: str) -> str:
 
 def markdown_formula_to_reportlab(text: str) -> str:
     text = html_escape(text)
+    text = text.replace(f'&lt;font color="{RED}"&gt;', f'<font color="{RED}">')
+    text = text.replace("&lt;/font&gt;", "</font>")
     text = re.sub(r"\^([A-Za-z0-9+\-*/().]+)", r"<sup>\1</sup>", text)
     text = re.sub(r"_([A-Za-z0-9+\-*/().]+)", r"<sub>\1</sub>", text)
     return text

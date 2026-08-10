@@ -10,50 +10,50 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **Magnetic moment:** μ = γJ - γ gyromagnetic ratio.
 - **Quantization:** J_z = ℏm,  m = I,I-1,...,-I - Spin projection.
 - **Spin 1/2:** I = 1/2 ⇒ m = ±1/2 - ^1H has two states.
-- **Moment projection:** μ_z = γℏm = ±(1/2)γℏ - Along B_0.
+- **Moment projection:** <font color="#B00020">μ_z = γℏm = ±(1/2)γℏ</font> - Along B_0.
 
 ### Energy And Resonance
 
-- **Energy:** E_m = -μ_zB_0 = -γℏB_0m - Parallel lower for γ>0.
+- **Energy:** <font color="#B00020">E_m = -μ_zB_0 = -γℏB_0m</font> - Parallel lower for γ>0.
 - **Gap:** ΔE = γℏB_0 = ℏω_0 - Energy splitting.
 - **Boltzmann:** n_down/n_up = e^-ΔE/k_BT - Population ratio.
-- **Polarization:** Δn/n ≈ ΔE/(2k_BT) - For ΔE << kBT.
+- **Polarization:** <font color="#B00020">Δn/n ≈ ΔE/(2k_BT)</font> - For ΔE << kBT.
 - **Net M:** M_0 = Σμ = Δn μ_ze_z - Longitudinal M.
 - **Scaling:** M_0 ∝ ρ_HB_0/T - Proton density matters.
 
 ### Dynamics
 
-- **Torque:** dμ/dt = γ(μ × B) - Precession.
-- **Macroscopic:** dM/dt = γ(M × B) - Same law for M.
+- **Torque:** <font color="#B00020">dμ/dt = γ(μ × B)</font> - Precession.
+- **Macroscopic:** <font color="#B00020">dM/dt = γ(M × B)</font> - Same law for M.
 - **RF:** B_1(t)=B_1cos(ω_0t)e_x=B_L+B_R - Excitation field.
-- **Rotating frame:** (dM/dt)_rot=γM×B-ω_0×M =γM×B_eff - Use effective field.
+- **Rotating frame:** <font color="#B00020">(dM/dt)_rot=γM×B-ω_0×M =γM×B_eff</font> - Use effective field.
 - **Effective field:** B_eff=(B_0-ω/γ)e_z'+B_1,rote_x' - On resonance mostly B1.
 - **Flip angle:** α = γ∫B_1,rot(t)dt - RF pulse area.
 
 ### Relaxation
 
 - **T2*:** 1/T_2* = 1/T_2 + γδB - Field inhomogeneity.
-- **Bloch x:** dM_x/dt=γ(M_yB_z-M_zB_y) -M_x/T_2 - Transverse loss.
-- **Bloch y:** dM_y/dt=γ(M_zB_x-M_xB_z) -M_y/T_2 - Transverse loss.
-- **Bloch z:** dM_z/dt=γ(M_xB_y-M_yB_x) -(M_z-M_0)/T_1 - Recovery.
+- **Bloch x:** dM_x/dt=γ(M_yB_z-M_zB_y) <font color="#B00020">-M_x/T_2</font> - Transverse loss.
+- **Bloch y:** dM_y/dt=γ(M_zB_x-M_xB_z) <font color="#B00020">-M_y/T_2</font> - Transverse loss.
+- **Bloch z:** dM_z/dt=γ(M_xB_y-M_yB_x) <font color="#B00020">-(M_z-M_0)/T_1</font> - Recovery.
 
 ## Week 2 - Image Formation
 
 ### Encoding
 
 - **Gradient:** G_i=∂B_z/∂i - i=x,y,z.
-- **Linear field:** ΔB_z(x)=G_xx - Constant slope.
+- **Linear field:** <font color="#B00020">ΔB_z(x)=G_xx</font> - Constant slope.
 - **Frequency:** ω(r)=γ[B_0+G·r] - Position dependent.
 - **Readout:** ω(x)=γG_xx - Frequency encoding.
 - **Phase:** φ(y)=γG_yyT_y - Phase encoding.
-- **K-space:** k(t)=γ∫G(t)dt - Constant G: k=γGt.
+- **K-space:** <font color="#B00020">k(t)=γ∫G(t)dt</font> - Constant G: k=γGt.
 
 ### Signal And FT
 
-- **Signal:** s(k_x,k_y)∝ΣΣρ(x_i,y_j)e^j(k_xx_i+k_yy_j) - FT of object.
+- **Signal:** <font color="#B00020">s(k_x,k_y)∝ΣΣρ(x_i,y_j)e^j(k_xx_i+k_yy_j)</font> - FT of object.
 - **Image:** ρ(x,y)∝ΣΣs(k_xp,k_yq)e^-j(k_xpx+k_yqy) - Inverse FT.
-- **K spacing:** Δk=2π/FOV - Nyquist.
-- **Pixel:** Δx=FOV_x/N_x - Same in y.
+- **K spacing:** <font color="#B00020">Δk=2π/FOV</font> - Nyquist.
+- **Pixel:** <font color="#B00020">Δx=FOV_x/N_x</font> - Same in y.
 - **Max k:** k_max=π/Δx=πN_x/FOV_x - Resolution.
 - **Readout BW:** BW_x=γG_xFOV_x - Angular freq convention.
 - **Dwell:** Δt=2π/BW_x,  T_x=N_xΔt - Sampling.
@@ -61,7 +61,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Slice And Contrast
 
 - **Gradient moment:** k_i=γ∫G_i(t)dt - Gradient area.
-- **Slice thickness:** Δz=BW_RF/(γG_z) - RF bandwidth.
+- **Slice thickness:** <font color="#B00020">Δz=BW_RF/(γG_z)</font> - RF bandwidth.
 - **RF selectivity:** R=BW_RFT_RF - Longer pulse narrower BW.
 - **PD contrast:** C∝ρ_A-ρ_B - Long TR.
 - **Partial sat.:** C∝ρ_A(1-e^-TR/T_1A)-ρ_B(1-e^-TR/T_1B) - T1 weighting.
@@ -72,7 +72,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Speed, SNR, Resolution
 
 - **Voxel:** ΔV=ΔxΔyΔz - Voxel volume.
-- **SNR scaling:** SNR ∝ ΔV√T_scan/√BW - Core tradeoff.
+- **SNR scaling:** <font color="#B00020">SNR ∝ ΔV√T_scan/√BW</font> - Core tradeoff.
 - **Averages:** SNR ∝ √NSA - Repeated scans.
 - **Acceleration:** T_scan,R≈T_scan/R - Undersampling.
 - **Aliased FOV:** FOV_alias=FOV/R - Phase undersampling.
@@ -80,14 +80,14 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Coil Encoding
 
 - **Coil signal:** s_γ(k)=∫ρ(x)c_γ(x)e^ikxdx - Sensitivity cγ.
-- **Matrix model:** s = Eρ + η - Encoding plus noise.
+- **Matrix model:** <font color="#B00020">s = Eρ + η</font> - Encoding plus noise.
 - **Decode:** i = Fs - Reconstruction matrix.
 - **SENSE:** ρ̂=(E^HΨ^-1E)^-1E^HΨ^-1s - Optimum SNR inverse.
 - **Regularized:** ρ̂=(E^HΨ^-1E+λI)^-1E^HΨ^-1s - Stabilizes ill-conditioning.
 
 ### Parallel Limits
 
-- **SENSE SNR:** SNR_SENSE=SNR_full/(√R · g(x)) - g-factor penalty.
+- **SENSE SNR:** <font color="#B00020">SNR_SENSE=SNR_full/(√R · g(x))</font> - g-factor penalty.
 - **g-factor:** g(x)=√[(E^HE)_ii((E^HE)^-1)_ii] ≥ 1 - Noise amplification.
 - **Good coils:** Distinct c_γ(x) ⇒ low g - Separates aliased voxels.
 - **Failure:** R > N_coils or poor sensitivities - Underdetermined/ill-conditioned.
@@ -103,11 +103,11 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### Common Signals
 
-- **Spin echo:** S_SE∝ρ(1-e^-TR/T_1)e^-TE/T_2 - T1 by TR, T2 by TE.
+- **Spin echo:** <font color="#B00020">S_SE∝ρ(1-e^-TR/T_1)e^-TE/T_2</font> - T1 by TR, T2 by TE.
 - **GRE:** S_GRE∝ρ sinα (1-E_1)/(1-E_1cosα)e^-TE/T_2* - E1=e^-TR/T1.
 - **Inversion:** M_z(TI)=M_0(1-2e^-TI/T_1) - TR >> T1.
-- **Null time:** TI_null=T_1ln2 - Suppress tissue.
-- **Ernst:** α_E=arccos(e^-TR/T_1) - Max steady-state signal.
+- **Null time:** <font color="#B00020">TI_null=T_1ln2</font> - Suppress tissue.
+- **Ernst:** <font color="#B00020">α_E=arccos(e^-TR/T_1)</font> - Max steady-state signal.
 
 ### Weighting Rules
 
@@ -120,9 +120,9 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### Signal And Noise
 
-- **Signal voltage:** U_sig(x)=ωM_xy(x)C(x)ΔV - Receive sensitivity C.
+- **Signal voltage:** <font color="#B00020">U_sig(x)=ωM_xy(x)C(x)ΔV</font> - Receive sensitivity C.
 - **Noise power:** P=σ|E|^2ΔV - Sample losses.
-- **Noise variance:** Ψ=4k_BTBW R - Johnson-Nyquist.
+- **Noise variance:** <font color="#B00020">Ψ=4k_BTBW R</font> - Johnson-Nyquist.
 - **SNR:** SNR=U_sig/U_noise - Image quality.
 - **SNR scaling:** SNR∝ΔV√NSA/√BW - Resolution/speed tradeoff.
 
@@ -146,16 +146,16 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 - **Trajectory:** r(t)=r_0+v(t-t_0)+a(t-t_0)^2/2+... - Moving spin.
 - **Phase:** φ=γ∫G(t)r(t)dt - Gradient phase.
-- **Moments:** M_n=∫G(t)(t-t_0)^ndt - nth gradient moment.
-- **Expansion:** φ=γ[r_0M_0+vM_1+aM_2/2+...] - Position/velocity/acceleration.
+- **Moments:** <font color="#B00020">M_n=∫G(t)(t-t_0)^ndt</font> - nth gradient moment.
+- **Expansion:** <font color="#B00020">φ=γ[r_0M_0+vM_1+aM_2/2+...]</font> - Position/velocity/acceleration.
 - **Bipolar:** M_0=0,  φ≈γvM_1 - Velocity encoding.
 
 ### Phase Contrast
 
-- **Encoding:** VENC=π/(γM_1) - Phase reaches ±π.
+- **Encoding:** <font color="#B00020">VENC=π/(γM_1)</font> - Phase reaches ±π.
 - **Velocity:** v=(Δφ/π)VENC - Phase difference map.
 - **Aliasing:** |v|>VENC ⇒ phase wraps - Set VENC high enough.
-- **Flow rate:** Q=Σ v_iΔA_i - Through-plane flow.
+- **Flow rate:** <font color="#B00020">Q=Σ v_iΔA_i</font> - Through-plane flow.
 - **Velocity distribution:** s(x,k_v)=Σρ(x,v)e^jk_vv - Generalized velocity encoding.
 
 ### Hemodynamics
@@ -169,7 +169,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### Motion Encoding
 
-- **Phase:** φ=γ∫G(t)x(t)dt - All motion artifacts start here.
+- **Phase:** <font color="#B00020">φ=γ∫G(t)x(t)dt</font> - All motion artifacts start here.
 - **Motion model:** x(t)=x_0+v(t-t_0)+a(t-t_0)^2/2+... - Taylor expansion.
 - **Moment nulling:** M_0=0 removes position phase; M_1=0 compensates velocity - Gradient design.
 - **Velocity phase:** φ_v=γvM_1 - Residual if M1 nonzero.
@@ -195,7 +195,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **T2*:** 1/T_2*=1/T_2+γΔB - Static dephasing.
 - **Susceptibility:** ΔB≈ΔχB_0 - Blood oxygenation effect.
 - **GRE BOLD:** S(TE)=S_0e^-TE/T_2* - TE near T2*.
-- **Small change:** ΔS/S≈-TE·ΔR_2* - R2*=1/T2*.
+- **Small change:** <font color="#B00020">ΔS/S≈-TE·ΔR_2*</font> - R2*=1/T2*.
 
 ### Diffusion Physics
 
@@ -206,8 +206,8 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### DWI/DTI
 
-- **DWI signal:** S(TE,b)=S_0e^-TE/T_2e^-bD - Scalar diffusion.
-- **b-value:** b=γ^2G^2δ^2(Δ-δ/3) - PGSE sensitivity.
+- **DWI signal:** <font color="#B00020">S(TE,b)=S_0e^-TE/T_2e^-bD</font> - Scalar diffusion.
+- **b-value:** <font color="#B00020">b=γ^2G^2δ^2(Δ-δ/3)</font> - PGSE sensitivity.
 - **Tensor:** ln(S/S_0)=-b g^TDg - Direction g.
 - **MD:** MD=(λ_1+λ_2+λ_3)/3 - Mean diffusivity.
 - **FA:** FA=√(3/2) √Σ(λ_i-MD)^2/√Σλ_i^2 - Anisotropy.
@@ -216,7 +216,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### General Encoding
 
-- **Data model:** d=Eρ+η - General MRI inverse problem.
+- **Data model:** <font color="#B00020">d=Eρ+η</font> - General MRI inverse problem.
 - **Cartesian FT:** E=Fourier sampling operator - Standard MRI.
 - **Parallel:** E includes coil sensitivities c_γ(r) - SENSE/arrays.
 - **Optimal inverse:** ρ̂=(E^HΨ^-1E)^-1E^HΨ^-1d - If well-conditioned.
@@ -226,7 +226,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 - **Sparsity:** x=Φρ has many small/zero coefficients - Sparse transform.
 - **Undersampled data:** d_Ω=P_ΩFρ - Sample subset Ω.
-- **CS recon:** min_ρ ||Φρ||_1  s.t.  ||Eρ-d||_2≤ε - Sparse recovery.
+- **CS recon:** <font color="#B00020">min_ρ ||Φρ||_1  s.t.  ||Eρ-d||_2≤ε</font> - Sparse recovery.
 - **TV:** Φρ=∇ρ ⇒ total variation penalty - Piecewise smooth images.
 - **Sampling:** random/incoherent k-space undersampling - Artifacts become noise-like.
 
@@ -241,16 +241,16 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Chemical Shift
 
 - **Larmor:** ν=-γB_0 [Hz] - Sign by convention.
-- **Shift:** δ=(ν-ν_ref)/ν_ref ·10^6 ppm - Field-independent ppm.
-- **Hz separation:** Δν=Δδ · ν_ref ·10^-6 - Grows with B0.
+- **Shift:** <font color="#B00020">δ=(ν-ν_ref)/ν_ref ·10^6 ppm</font> - Field-independent ppm.
+- **Hz separation:** <font color="#B00020">Δν=Δδ · ν_ref ·10^-6</font> - Grows with B0.
 - **1 ppm:** 1 ppm = ν_ref·10^-6 Hz - 64 Hz at 1.5T for 1H.
 
 ### Spectrum
 
-- **FID:** s(t)=A e^-t/T_2*e^i2πν_At - Single component.
+- **FID:** <font color="#B00020">s(t)=A e^-t/T_2*e^i2πν_At</font> - Single component.
 - **Spectrum:** S(ν)=FT{s(t)} - Frequency-domain signal.
 - **Lorentzian:** Re S(ν) ∝ T_2* / [1+(2πT_2*(ν-ν_A))^2] - Line shape.
-- **Linewidth:** FWHM=1/(πT_2*) - Shorter T2* broader.
+- **Linewidth:** <font color="#B00020">FWHM=1/(πT_2*)</font> - Shorter T2* broader.
 - **Mixture:** s(t)=Σ_cw_ce^-t/T_2,c*e^i2πν_ct - Superposition.
 
 ### Sampling And J
@@ -271,7 +271,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **Phase accrual:** Δφ=2πΔντ - Chemical shift phase.
 - **Binomial spacing:** τ≈1/(2Δν) or 1/(4Δν) - Depends on target phase.
 - **Inversion recovery:** M_z(TI)=M_0(1-2e^-TI/T_1) - After 180°.
-- **Null:** TI_null=T_1ln2 - Water/fat suppression.
+- **Null:** <font color="#B00020">TI_null=T_1ln2</font> - Water/fat suppression.
 
 ### Localization
 
@@ -282,9 +282,9 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### CSI And High Field
 
-- **Shift artifact:** Δx=Δν_CS/(γG) - Chemical shift displacement.
+- **Shift artifact:** <font color="#B00020">Δx=Δν_CS/(γG)</font> - Chemical shift displacement.
 - **Fractional shift:** Δx/Δx_RF=Δν_CS/BW_RF - Use large RF BW.
-- **CSI signal:** s(k_x,k_y,t)=∭ρ(x,y,Δν)e^ik_xxe^ik_yye^i2πΔνtdxdydΔν - 2 spatial + spectral.
+- **CSI signal:** <font color="#B00020">s(k_x,k_y,t)=∭ρ(x,y,Δν)e^ik_xxe^ik_yye^i2πΔνtdxdydΔν</font> - 2 spatial + spectral.
 - **CSI recon:** S(x,y,Δν)=FT_tFT_kxFT_ky{s} - 3D transform.
 - **CSI scan time:** T_scan=N_xN_yTR·NSA - Slow phase encoding.
 - **High-field SNR:** U_sig∼B_0^2, U_noise∼B_0, SNR∼B_0 - Approximate.
