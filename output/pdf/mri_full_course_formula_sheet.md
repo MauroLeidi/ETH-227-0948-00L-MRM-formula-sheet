@@ -317,20 +317,24 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### GRE With Flip Angle α
 
-- **RF jump:** M<sub>z</sub><sup>+</sup>=M<sub>z</sub><sup>-</sup>cosα, M<sub>xy</sub><sup>+</sup>=M<sub>z</sub><sup>-</sup>sinα - α pulse creates transverse magnetization.
-- **Longitudinal recovery:** <font color="#B00020">M<sub>z</sub>(t)=M<sub>0</sub>(1-e<sup>-t/T<sub>1</sub></sup>)+M<sub>z</sub><sup>-</sup>cosα e<sup>-t/T<sub>1</sub></sup></font> - Recovery starts from M<sub>z</sub><sup>+</sup>.
-- **GRE signal:** <font color="#B00020">S<sub>GRE</sub>∝M<sub>z</sub><sup>-</sup>sinα e<sup>-TE/T<sub>2</sub>*</sup></font> - Uses T<sub>2</sub>* decay because no 180° refocusing.
+- **Sketch:** [[figure:gre]] - α pulses separated by TR; M<sub>z</sub> recovers while M<sub>xy</sub> decays after excitation.
+- **After RF:** M<sub>z</sub><sup>+</sup>=M<sub>z</sub><sup>-</sup>cosα, M<sub>xy</sub><sup>+</sup>=M<sub>z</sub><sup>-</sup>sinα - The RF pulse rotates longitudinal magnetization into the transverse plane.
+- **T1 recovery:** dM<sub>z</sub>/dt=(M<sub>0</sub>-M<sub>z</sub>)/T<sub>1</sub> ⇒ <font color="#B00020">M<sub>z</sub>(t)=M<sub>0</sub>(1-e<sup>-t/T<sub>1</sub></sup>)+M<sub>z</sub><sup>-</sup>cosα e<sup>-t/T<sub>1</sub></sup></font> - Initial condition is M<sub>z</sub><sup>+</sup>.
+- **GRE signal:** <font color="#B00020">S<sub>GRE</sub>∝M<sub>z</sub><sup>-</sup>sinα e<sup>-TE/T<sub>2</sub>*</sup></font> - No 180° refocusing, so transverse decay is T<sub>2</sub>*.
 
 ### Spin Echo Sequence
 
-- **Before 180°:** M<sub>z</sub><sup>-</sup>(T<sub>E</sub>/2)=M<sub>0</sub>(1-e<sup>-T<sub>E</sub>/(2T<sub>1</sub>)</sup>) - Recovery after the 90° pulse.
-- **180° inversion:** M<sub>z</sub><sup>+</sup>(T<sub>E</sub>/2)=-M<sub>z</sub><sup>-</sup>(T<sub>E</sub>/2) - Longitudinal component flips sign.
-- **Before next 90°:** <font color="#B00020">M<sub>z</sub>(T<sub>R</sub>-T<sub>E</sub>/2)=M<sub>0</sub>[1-2e<sup>-(T<sub>R</sub>-T<sub>E</sub>/2)/T<sub>1</sub></sup>+e<sup>-T<sub>R</sub>/T<sub>1</sub></sup>]</font> - Available M<sub>z</sub> for the next excitation.
-- **SE signal:** <font color="#B00020">S<sub>SE</sub>∝M<sub>z</sub>(T<sub>R</sub>-T<sub>E</sub>/2)e<sup>-T<sub>E</sub>/T<sub>2</sub></sup></font> - Echo amplitude after T<sub>2</sub> decay.
+- **Sketch:** [[figure:se]] - 90° pulse creates M<sub>xy</sub>; 180° pulse at T<sub>E</sub>/2 refocuses the echo at T<sub>E</sub>.
+- **Before 180°:** M<sub>z</sub><sup>-</sup>(T<sub>E</sub>/2)=M<sub>0</sub>(1-e<sup>-T<sub>E</sub>/(2T<sub>1</sub>)</sup>) - Recovery starts from M<sub>z</sub>=0 after an ideal 90° pulse.
+- **180° inversion:** M<sub>z</sub><sup>+</sup>(T<sub>E</sub>/2)=-M<sub>z</sub><sup>-</sup>(T<sub>E</sub>/2) - The 180° pulse flips the recovered longitudinal component.
+- **Available Mz:** <font color="#B00020">M<sub>z</sub>(T<sub>R</sub>-T<sub>E</sub>/2)=M<sub>0</sub>[1-2e<sup>-(T<sub>R</sub>-T<sub>E</sub>/2)/T<sub>1</sub></sup>+e<sup>-T<sub>R</sub>/T<sub>1</sub></sup>]</font> - This is the longitudinal magnetization before the next excitation.
+- **SE signal:** <font color="#B00020">S<sub>SE</sub>∝M<sub>z</sub>(T<sub>R</sub>-T<sub>E</sub>/2)e<sup>-T<sub>E</sub>/T<sub>2</sub></sup></font> - Echo amplitude is available M<sub>z</sub> times T<sub>2</sub> decay.
 
 ### Ernst Flip Angle
 
-- **Steady state:** M<sub>SS</sub>=M<sub>z</sub><sup>-</sup>(T<sub>R</sub>), E<sub>1</sub>=e<sup>-T<sub>R</sub>/T<sub>1</sub></sup> - Same M<sub>z</sub> before each RF pulse.
-- **Fixed point:** M<sub>SS</sub>=M<sub>0</sub>(1-E<sub>1</sub>)+M<sub>SS</sub>cosα E<sub>1</sub> - GRE recovery equation at t=T<sub>R</sub>.
-- **Steady-state magnetization:** <font color="#B00020">M<sub>SS</sub>=M<sub>0</sub>(1-E<sub>1</sub>)/(1-E<sub>1</sub>cosα)</font> - Longitudinal magnetization before RF.
-- **Ernst angle:** <font color="#B00020">α<sub>E</sub>=arccos(E<sub>1</sub>)=arccos(e<sup>-T<sub>R</sub>/T<sub>1</sub></sup>)</font> - Obtained by maximizing M<sub>SS</sub>sinα.
+- **Sketch:** [[figure:ernst]] - Repeated α pulses reach a fixed M<sub>z</sub> just before each RF pulse.
+- **Define E1:** E<sub>1</sub>=e<sup>-T<sub>R</sub>/T<sub>1</sub></sup>, M<sub>SS</sub>=M<sub>z</sub><sup>-</sup>(T<sub>R</sub>) - Steady state means the same pre-RF value repeats every TR.
+- **Fixed point:** M<sub>SS</sub>=M<sub>0</sub>(1-E<sub>1</sub>)+M<sub>SS</sub>cosα E<sub>1</sub> - Apply GRE recovery over one TR.
+- **Solve MSS:** <font color="#B00020">M<sub>SS</sub>=M<sub>0</sub>(1-E<sub>1</sub>)/(1-E<sub>1</sub>cosα)</font> - Longitudinal magnetization before RF.
+- **Signal to maximize:** S(α)∝M<sub>SS</sub>sinα=M<sub>0</sub>(1-E<sub>1</sub>)sinα/(1-E<sub>1</sub>cosα) - Take dS/dα=0.
+- **Ernst angle:** <font color="#B00020">α<sub>E</sub>=arccos(E<sub>1</sub>)=arccos(e<sup>-T<sub>R</sub>/T<sub>1</sub></sup>)</font> - Best GRE signal for given TR and T<sub>1</sub>.

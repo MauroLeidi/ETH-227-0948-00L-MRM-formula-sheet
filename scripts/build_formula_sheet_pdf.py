@@ -11,6 +11,7 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.graphics.shapes import Drawing, Line, Path as DrawPath, String
 from reportlab.platypus import (
     BaseDocTemplate,
     Frame,
@@ -63,6 +64,81 @@ def markdown_formula_to_reportlab(text: str) -> str:
     return text
 
 
+def sequence_figure(kind: str, width: float) -> Drawing:
+    height = 40
+    drawing = Drawing(width, height)
+    ink = colors.HexColor("#17292E")
+    accent = colors.HexColor(RED)
+    muted = colors.HexColor("#5B6668")
+
+    def text(x, y, value, size=5.2, color=muted):
+        drawing.add(String(x, y, value, fontName="SheetRegular", fontSize=size, fillColor=color))
+
+    def axis(y, label):
+        drawing.add(Line(14, y, width - 8, y, strokeColor=ink, strokeWidth=0.55))
+        drawing.add(Line(width - 12, y + 2, width - 8, y, strokeColor=ink, strokeWidth=0.55))
+        drawing.add(Line(width - 12, y - 2, width - 8, y, strokeColor=ink, strokeWidth=0.55))
+        text(1, y - 2, label, 5.0, ink)
+
+    def pulse(x, y, label, tall=18):
+        drawing.add(Line(x, y, x, y + tall, strokeColor=accent, strokeWidth=1.2))
+        drawing.add(Line(x - 3, y, x + 3, y, strokeColor=accent, strokeWidth=1.2))
+        text(x - 5, y + tall + 2, label, 5.0, accent)
+
+    def bracket(x1, x2, y, label):
+        drawing.add(Line(x1, y, x2, y, strokeColor=accent, strokeWidth=0.55))
+        drawing.add(Line(x1, y - 2, x1, y + 2, strokeColor=accent, strokeWidth=0.55))
+        drawing.add(Line(x2, y - 2, x2, y + 2, strokeColor=accent, strokeWidth=0.55))
+        text((x1 + x2) / 2 - 5, y + 2.5, label, 5.0, accent)
+
+    if kind == "gre":
+        axis(30, "RF")
+        pulse(34, 30, "α", 10)
+        pulse(width * 0.54, 30, "α", 10)
+        bracket(34, width * 0.54, 37, "TR")
+        axis(15, "Mz")
+        recovery = DrawPath()
+        recovery.moveTo(34, 8)
+        recovery.curveTo(width * 0.30, 11, width * 0.40, 16, width * 0.54, 20)
+        recovery.lineTo(width * 0.54, 8)
+        recovery.curveTo(width * 0.70, 11, width * 0.82, 16, width - 18, 20)
+        recovery.strokeColor = accent
+        recovery.strokeWidth = 1.1
+        recovery.fillColor = None
+        drawing.add(recovery)
+        axis(3, "Mxy")
+        drawing.add(Line(34, 12, width * 0.38, 3, strokeColor=accent, strokeWidth=1.1))
+        drawing.add(Line(width * 0.54, 12, width * 0.80, 3, strokeColor=accent, strokeWidth=1.1))
+    elif kind == "se":
+        axis(30, "RF")
+        pulse(28, 30, "90°", 9)
+        pulse(width * 0.42, 30, "180°", 17)
+        bracket(28, width * 0.42, 37, "TE/2")
+        bracket(width * 0.42, width * 0.72, 37, "TE/2")
+        axis(17, "Mxy")
+        drawing.add(Line(28, 26, width * 0.42, 17, strokeColor=accent, strokeWidth=1.1))
+        drawing.add(Line(width * 0.42, 17, width * 0.72, 25, strokeColor=accent, strokeWidth=1.1))
+        drawing.add(Line(width * 0.72, 25, width - 16, 17, strokeColor=accent, strokeWidth=1.1))
+        text(width * 0.70, 27, "echo", 5.0, accent)
+        axis(4, "Mz")
+        drawing.add(Line(16, 12, 28, 12, strokeColor=accent, strokeWidth=1.1))
+        drawing.add(Line(28, 12, width * 0.42, 6, strokeColor=accent, strokeWidth=1.1))
+        drawing.add(Line(width * 0.42, 6, width - 16, 12, strokeColor=accent, strokeWidth=1.1))
+    elif kind == "ernst":
+        axis(30, "RF")
+        pulse(24, 30, "α", 8)
+        pulse(width * 0.35, 30, "α", 8)
+        pulse(width * 0.56, 30, "α", 8)
+        pulse(width * 0.77, 30, "α", 8)
+        axis(14, "Mz")
+        for x in (24, width * 0.35, width * 0.56, width * 0.77):
+            drawing.add(Line(x - 16, 21, x, 18, strokeColor=accent, strokeWidth=1.1))
+            drawing.add(Line(x, 18, x, 8, strokeColor=accent, strokeWidth=1.1))
+            drawing.add(Line(x, 8, x + 26, 17, strokeColor=accent, strokeWidth=1.1))
+        text(width * 0.58, 20, "MSS repeats before RF", 5.0, accent)
+    return drawing
+
+
 def parse_markdown(md_path: Path):
     lectures = []
     current_lecture = None
@@ -105,14 +181,21 @@ def footer(canvas, doc):
 
 
 def make_table(rows, styles, col_widths):
-    table_rows = [
-        [
-            Paragraph(f"<b>{html_escape(label)}</b>", styles["CellLabel"]),
-            Paragraph(markdown_formula_to_reportlab(formula), styles["Formula"]),
-            Paragraph(markdown_formula_to_reportlab(note), styles["Note"]),
-        ]
-        for label, formula, note in rows
-    ]
+    table_rows = []
+    for label, formula, note in rows:
+        figure_match = re.fullmatch(r"\[\[figure:([a-z0-9_-]+)\]\]", formula)
+        formula_cell = (
+            sequence_figure(figure_match.group(1), col_widths[1] - 4)
+            if figure_match
+            else Paragraph(markdown_formula_to_reportlab(formula), styles["Formula"])
+        )
+        table_rows.append(
+            [
+                Paragraph(f"<b>{html_escape(label)}</b>", styles["CellLabel"]),
+                formula_cell,
+                Paragraph(markdown_formula_to_reportlab(note), styles["Note"]),
+            ]
+        )
     table = Table(table_rows, colWidths=col_widths, hAlign="LEFT")
     table.setStyle(
         TableStyle(
