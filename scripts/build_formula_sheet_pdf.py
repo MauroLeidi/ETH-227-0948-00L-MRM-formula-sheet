@@ -55,6 +55,9 @@ def markdown_formula_to_reportlab(text: str) -> str:
     text = html_escape(text)
     text = text.replace(f'&lt;font color="{RED}"&gt;', f'<font color="{RED}">')
     text = text.replace("&lt;/font&gt;", "</font>")
+    for tag in ("sub", "sup"):
+        text = text.replace(f"&lt;{tag}&gt;", f"<{tag}>")
+        text = text.replace(f"&lt;/{tag}&gt;", f"</{tag}>")
     text = re.sub(r"\^([A-Za-z0-9+\-*/().]+)", r"<sup>\1</sup>", text)
     text = re.sub(r"_([A-Za-z0-9+\-*/().]+)", r"<sub>\1</sub>", text)
     return text
