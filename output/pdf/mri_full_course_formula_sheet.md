@@ -43,7 +43,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 - **Gradient:** G_i=∂B_z/∂i - i=x,y,z.
 - **Linear field:** <font color="#B00020">ΔB_z(x)=G_xx</font> - Constant slope.
-- **Frequency:** ω(r)=γ[B_0+G·r] - Position dependent.
+- **Frequency:** ω(r)=γ(B_0+G r) - Position dependent.
 - **Readout:** ω(x)=γG_xx - Frequency encoding.
 - **Phase:** φ(y)=γG_yyT_y - Phase encoding.
 - **K-space:** <font color="#B00020">k(t)=γ∫G(t)dt</font> - Constant G: k=γGt.
