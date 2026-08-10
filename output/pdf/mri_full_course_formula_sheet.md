@@ -106,6 +106,13 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **T2 decay:** M<sub>xy</sub>(t)=M<sub>xy</sub>(0)exp(-t/T<sub>2</sub>) - Spin-spin.
 - **T2* decay:** M<sub>xy</sub>(t)=M<sub>xy</sub>(0)exp(-t/T<sub>2</sub>*) - GRE/FID.
 
+### Analytical Description
+
+- **Sequence ops:** M<sub>n+1</sub>=O<sub>n</sub>...O<sub>1</sub>M<sub>0</sub>,  O∈{A(α),R(φ)} - RF pulse plus relaxation blocks.
+- **RF operator:** <font color="#B00020">A(α)=cosα I+(1−cosα)bb<sup>T</sup>+sinα skew(b)</font> - Rotation around RF axis b.
+- **Relax. op.:** <font color="#B00020">M'=R(φ)M+(1−E<sub>1</sub>)M<sub>0</sub>e<sub>z</sub></font> - E<sub>1</sub>=e<sup>−t/T<sub>1</sub></sup>, E<sub>2</sub>=e<sup>−t/T<sub>2</sub></sup>.
+- **R matrix:** R(φ)=[E<sub>2</sub>cosφ,−E<sub>2</sub>sinφ,0; E<sub>2</sub>sinφ,E<sub>2</sub>cosφ,0; 0,0,E<sub>1</sub>] - Precession plus decay.
+
 ### Common Signals
 
 - **Spin echo:** <font color="#B00020">S<sub>SE</sub>∝ρ[1-exp(-TR/T<sub>1</sub>)] exp(-TE/T<sub>2</sub>)</font> - T1 by TR, T2 by TE.
