@@ -168,6 +168,11 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **Expansion:** <font color="#B00020">φ=γ[r<sub>0</sub>M<sub>0</sub>+vM<sub>1</sub>+aM<sub>2</sub>/2+...]</font> - Position/velocity/acceleration.
 - **Bipolar:** M<sub>0</sub>=0,  φ≈γvM<sub>1</sub> - Velocity encoding.
 
+### Amplitude Contrast
+
+- **GRE/PS:** <font color="#B00020">σ<sub>PS</sub>∝M<sub>0</sub>[v<sub>0</sub>T<sub>R</sub>+(Δz−v<sub>0</sub>T<sub>R</sub>)(1−e<sup>−T<sub>R</sub>/T<sub>1</sub></sup>)]</font> - Inflow plus partial saturation.
+- **Spin echo:** <font color="#B00020">σ<sub>SE</sub>∝σ<sub>PS</sub>e<sup>−T<sub>E</sub>/T<sub>2</sub></sup>(1−T<sub>E</sub>v<sub>0</sub>/(2Δz))</font> - T2 decay plus outflow loss.
+
 ### Phase Contrast
 
 - **Encoding:** <font color="#B00020">VENC=π/(γM<sub>1</sub>)</font> - Phase reaches ±π.
