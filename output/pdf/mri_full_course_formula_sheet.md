@@ -312,3 +312,25 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **CSI scan time:** T<sub>scan</sub>=N<sub>x</sub>N<sub>y</sub>TR·NSA - Slow phase encoding.
 - **High-field SNR:** U<sub>sig</sub>∼B<sub>0</sub><sup>2</sup>, U<sub>noise</sub>∼B<sub>0</sub>, SNR∼B<sub>0</sub> - Approximate.
 - **SAR:** P∝σE<sup>2</sup>∝σγ<sup>2</sup>B<sub>0</sub><sup>2</sup>B<sub>1</sub><sup>2</sup> - High-field cost.
+
+## Derivation Appendix - Key Sequences
+
+### GRE With Flip Angle α
+
+- **RF jump:** M<sub>z</sub><sup>+</sup>=M<sub>z</sub><sup>-</sup>cosα, M<sub>xy</sub><sup>+</sup>=M<sub>z</sub><sup>-</sup>sinα - α pulse creates transverse magnetization.
+- **Longitudinal recovery:** <font color="#B00020">M<sub>z</sub>(t)=M<sub>0</sub>(1-e<sup>-t/T<sub>1</sub></sup>)+M<sub>z</sub><sup>-</sup>cosα e<sup>-t/T<sub>1</sub></sup></font> - Recovery starts from M<sub>z</sub><sup>+</sup>.
+- **GRE signal:** <font color="#B00020">S<sub>GRE</sub>∝M<sub>z</sub><sup>-</sup>sinα e<sup>-TE/T<sub>2</sub>*</sup></font> - Uses T<sub>2</sub>* decay because no 180° refocusing.
+
+### Spin Echo Sequence
+
+- **Before 180°:** M<sub>z</sub><sup>-</sup>(T<sub>E</sub>/2)=M<sub>0</sub>(1-e<sup>-T<sub>E</sub>/(2T<sub>1</sub>)</sup>) - Recovery after the 90° pulse.
+- **180° inversion:** M<sub>z</sub><sup>+</sup>(T<sub>E</sub>/2)=-M<sub>z</sub><sup>-</sup>(T<sub>E</sub>/2) - Longitudinal component flips sign.
+- **Before next 90°:** <font color="#B00020">M<sub>z</sub>(T<sub>R</sub>-T<sub>E</sub>/2)=M<sub>0</sub>[1-2e<sup>-(T<sub>R</sub>-T<sub>E</sub>/2)/T<sub>1</sub></sup>+e<sup>-T<sub>R</sub>/T<sub>1</sub></sup>]</font> - Available M<sub>z</sub> for the next excitation.
+- **SE signal:** <font color="#B00020">S<sub>SE</sub>∝M<sub>z</sub>(T<sub>R</sub>-T<sub>E</sub>/2)e<sup>-T<sub>E</sub>/T<sub>2</sub></sup></font> - Echo amplitude after T<sub>2</sub> decay.
+
+### Ernst Flip Angle
+
+- **Steady state:** M<sub>SS</sub>=M<sub>z</sub><sup>-</sup>(T<sub>R</sub>), E<sub>1</sub>=e<sup>-T<sub>R</sub>/T<sub>1</sub></sup> - Same M<sub>z</sub> before each RF pulse.
+- **Fixed point:** M<sub>SS</sub>=M<sub>0</sub>(1-E<sub>1</sub>)+M<sub>SS</sub>cosα E<sub>1</sub> - GRE recovery equation at t=T<sub>R</sub>.
+- **Steady-state magnetization:** <font color="#B00020">M<sub>SS</sub>=M<sub>0</sub>(1-E<sub>1</sub>)/(1-E<sub>1</sub>cosα)</font> - Longitudinal magnetization before RF.
+- **Ernst angle:** <font color="#B00020">α<sub>E</sub>=arccos(E<sub>1</sub>)=arccos(e<sup>-T<sub>R</sub>/T<sub>1</sub></sup>)</font> - Obtained by maximizing M<sub>SS</sub>sinα.
