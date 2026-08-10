@@ -42,6 +42,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Encoding
 
 - **Gradient:** G<sub>i</sub>=∂B<sub>z</sub>/∂i - i=x,y,z.
+- **Loop field:** <font color="#B00020">B<sub>z</sub>(z)=μ<sub>0</sub>I r<sup>2</sup>/(2(r<sup>2</sup>+z<sup>2</sup>)<sup>3/2</sup>)</font> - Circular current loop.
 - **Linear field:** <font color="#B00020">ΔB<sub>z</sub>(x)=G<sub>x</sub> x</font> - Constant slope.
 - **Frequency:** ω(r)=γ(B_0+G r) - Position dependent.
 - **Readout:** ω(x)=γG<sub>x</sub> x - Frequency encoding.
@@ -55,8 +56,8 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **K spacing:** <font color="#B00020">Δk = 2π/FOV = BW / N<sub>x</sub></font> - Nyquist/readout spacing.
 - **Pixel:** <font color="#B00020">Δx=FOV_x/N_x</font> - Same in y.
 - **Max k:** k_max=π/Δx=πN_x/FOV_x - Resolution.
-- **Readout BW:** BW_x=γG_xFOV_x - Angular freq convention.
-- **Dwell:** Δt=2π/BW_x,  T_x=N_xΔt - Sampling.
+- **Readout BW:** BW<sub>x</sub>=γG<sub>x</sub>FOV<sub>x</sub> - Angular freq convention.
+- **Dwell:** Δt=2π/BW<sub>x</sub>,  T<sub>x</sub>=N<sub>x</sub>Δt - Sampling.
 
 ### Slice And Contrast
 
