@@ -151,8 +151,11 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Resolution Limits
 
 - **Fourier:** Δx≈π/k<sub>max</sub> - Sampling aperture.
-- **Relaxation blur:** k* = γGT<sub>2</sub>* - Finite T2* filters k-space.
+- **Readout filter:** <font color="#B00020">H(k)=rect[k/(2k<sub>max</sub>)] exp[-(k+k<sub>max</sub>)/k<sup>*</sup>]</font> - Relaxation-weighted k-space.
+- **Relaxation blur:** k<sup>*</sup> = γGT<sub>2</sub><sup>*</sup> - Finite T2* filters k-space.
 - **Diffusion blur:** x<sup>2</sup>≈6DT<sub>acq</sub> - Long readouts blur.
+- **Relax. limit:** <font color="#B00020">S(T<sub>2</sub><sup>*</sup>)∝exp(-t/T<sub>2</sub><sup>*</sup>)</font> - Resolution improves ∝G<sup>-1</sup>.
+- **Diff. limit:** <font color="#B00020">S(D)∝exp(-γ<sup>2</sup>G<sup>2</sup>Dt<sup>3</sup>)</font> - Resolution improves ∝G<sup>-1/3</sup>.
 - **SoS combine:** I<sub>SoS</sub>=√(∑<sub>c</sub>|I<sub>c</sub>|<sup>2</sup>) - Magnitude coil combine.
 
 ## Week 6 - Flow Imaging
