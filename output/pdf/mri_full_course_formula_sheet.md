@@ -52,7 +52,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 - **Signal:** <font color="#B00020">s(k<sub>x</sub>,k<sub>y</sub>) ∝ ∑<sub>i,j</sub> ρ(x<sub>i</sub>,y<sub>j</sub>) exp[j(k<sub>x</sub>x<sub>i</sub>+k<sub>y</sub>y<sub>j</sub>)]</font> - FT of object.
 - **Image:** ρ(x,y) ∝ ∑<sub>p,q</sub> s(k<sub>x,p</sub>,k<sub>y,q</sub>) exp[-j(k<sub>x,p</sub>x+k<sub>y,q</sub>y)] - Inverse FT.
-- **K spacing:** <font color="#B00020">Δk = 2π/FOV = BW / MatrixSize</font> - Nyquist/readout spacing.
+- **K spacing:** <font color="#B00020">Δk = 2π/FOV = BW / N<sub>x</sub></font> - Nyquist/readout spacing.
 - **Pixel:** <font color="#B00020">Δx=FOV_x/N_x</font> - Same in y.
 - **Max k:** k_max=π/Δx=πN_x/FOV_x - Resolution.
 - **Readout BW:** BW_x=γG_xFOV_x - Angular freq convention.
