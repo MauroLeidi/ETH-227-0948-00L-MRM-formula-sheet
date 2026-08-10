@@ -105,6 +105,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 ### Common Signals
 
 - **Spin echo:** <font color="#B00020">S<sub>SE</sub>∝ρ[1-exp(-TR/T<sub>1</sub>)] exp(-TE/T<sub>2</sub>)</font> - T1 by TR, T2 by TE.
+- **Max contrast TR:** <font color="#B00020">T<sub>R</sub>=[T<sub>1A</sub>T<sub>1B</sub>/(T<sub>1B</sub>-T<sub>1A</sub>)] ln[(S<sub>A</sub>T<sub>1B</sub>)/(S<sub>B</sub>T<sub>1A</sub>)]</font> - Obtained by setting dC/dTR=0.
 - **GRE:** S<sub>GRE</sub>∝ρ sinα (1-E<sub>1</sub>)/(1-E<sub>1</sub>cosα) exp(-TE/T<sub>2</sub>*) - E1=exp(-TR/T1).
 - **Inversion:** M<sub>z</sub>(TI)=M<sub>0</sub>[1-2exp(-TI/T<sub>1</sub>)] - TR >> T1.
 - **Null time:** <font color="#B00020">TI<sub>null</sub> = T<sub>1</sub> ln2</font> - Suppress tissue.
