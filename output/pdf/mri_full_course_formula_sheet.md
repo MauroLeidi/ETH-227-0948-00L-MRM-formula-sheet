@@ -137,8 +137,8 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 - **Signal voltage:** <font color="#B00020">U<sub>sig</sub>(x)=ωM<sub>xy</sub>(x)C(x)ΔV</font> - Receive sensitivity C.
 - **Noise power:** P=σ|E|<sup>2</sup>ΔV - Sample losses.
-- **Noise variance:** <font color="#B00020">Ψ=4k<sub>B</sub>T BW R</font> - Johnson-Nyquist.
-- **SNR:** SNR=U<sub>sig</sub>/U<sub>noise</sub> - Image quality.
+- **Noise variance:** <font color="#B00020">Ψ<sub>U</sub>=4k<sub>B</sub>BW(T<sub>s</sub>R<sub>s</sub>+T<sub>c</sub>R<sub>c</sub>)</font> - U<sub>noise</sub> variance; s=sample, c=coil.
+- **SNR:** <font color="#B00020">SNR=U<sub>signal</sub>/√Ψ<sub>U</sub>=ωM<sub>xy</sub>CΔV√N<sub>avg</sub>/√[4k<sub>B</sub>BW(T<sub>s</sub>R<sub>s</sub>+T<sub>c</sub>R<sub>c</sub>)]</font> - Full voltage-noise form.
 - **SNR scaling:** SNR∝ΔV√NSA/√BW - Resolution/speed tradeoff.
 
 ### Optimization
