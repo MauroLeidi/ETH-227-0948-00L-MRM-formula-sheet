@@ -16,9 +16,9 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 - **Energy:** <font color="#B00020">E_m = -μ_zB_0 = -γℏB_0m</font> - Parallel lower for γ>0.
 - **Gap:** ΔE = γℏB_0 = ℏω_0 - Energy splitting.
-- **Boltzmann:** n_down/n_up = e^-ΔE/k_BT - Population ratio.
+- **Boltzmann:** n<sub>down</sub>/n<sub>up</sub> = exp(-ΔE/k<sub>B</sub>T) - Population ratio.
 - **Polarization:** <font color="#B00020">Δn/n ≈ ΔE/(2k_BT)</font> - For ΔE << kBT.
-- **Net M:** M_0 = Σμ = Δn μ_ze_z - Longitudinal M.
+- **Net M:** M<sub>0</sub> = ∑μ = Δn μ<sub>z</sub>e<sub>z</sub> - Longitudinal M.
 - **Scaling:** M_0 ∝ ρ_HB_0/T - Proton density matters.
 
 ### Dynamics
@@ -32,7 +32,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### Relaxation
 
-- **T2*:** 1/T_2* = 1/T_2 + γδB - Field inhomogeneity.
+- **T2*:** 1/T<sub>2</sub>* = 1/T<sub>2</sub> + γδB - Field inhomogeneity.
 - **Bloch x:** dM_x/dt=γ(M_yB_z-M_zB_y) <font color="#B00020">-M_x/T_2</font> - Transverse loss.
 - **Bloch y:** dM_y/dt=γ(M_zB_x-M_xB_z) <font color="#B00020">-M_y/T_2</font> - Transverse loss.
 - **Bloch z:** dM_z/dt=γ(M_xB_y-M_yB_x) <font color="#B00020">-(M_z-M_0)/T_1</font> - Recovery.
@@ -41,18 +41,18 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### Encoding
 
-- **Gradient:** G_i=∂B_z/∂i - i=x,y,z.
+- **Gradient:** G<sub>i</sub>=∂B<sub>z</sub>/∂i - i=x,y,z.
 - **Linear field:** <font color="#B00020">ΔB<sub>z</sub>(x)=G<sub>x</sub> x</font> - Constant slope.
 - **Frequency:** ω(r)=γ(B_0+G r) - Position dependent.
-- **Readout:** ω(x)=γG_xx - Frequency encoding.
-- **Phase:** φ(y)=γG_yyT_y - Phase encoding.
+- **Readout:** ω(x)=γG<sub>x</sub> x - Frequency encoding.
+- **Phase:** φ(y)=γG<sub>y</sub> y T<sub>y</sub> - Phase encoding.
 - **K-space:** <font color="#B00020">k(t)=γ∫G(t)dt</font> - Constant G: k=γGt.
 
 ### Signal And FT
 
-- **Signal:** <font color="#B00020">s(k_x,k_y)∝ΣΣρ(x_i,y_j)e^j(k_xx_i+k_yy_j)</font> - FT of object.
-- **Image:** ρ(x,y)∝ΣΣs(k_xp,k_yq)e^-j(k_xpx+k_yqy) - Inverse FT.
-- **K spacing:** <font color="#B00020">Δk=2π/FOV</font> - Nyquist.
+- **Signal:** <font color="#B00020">s(k<sub>x</sub>,k<sub>y</sub>) ∝ ∑<sub>i,j</sub> ρ(x<sub>i</sub>,y<sub>j</sub>) exp[j(k<sub>x</sub>x<sub>i</sub>+k<sub>y</sub>y<sub>j</sub>)]</font> - FT of object.
+- **Image:** ρ(x,y) ∝ ∑<sub>p,q</sub> s(k<sub>x,p</sub>,k<sub>y,q</sub>) exp[-j(k<sub>x,p</sub>x+k<sub>y,q</sub>y)] - Inverse FT.
+- **K spacing:** <font color="#B00020">Δk = 2π/FOV = BW / MatrixSize</font> - Nyquist/readout spacing.
 - **Pixel:** <font color="#B00020">Δx=FOV_x/N_x</font> - Same in y.
 - **Max k:** k_max=π/Δx=πN_x/FOV_x - Resolution.
 - **Readout BW:** BW_x=γG_xFOV_x - Angular freq convention.
@@ -64,7 +64,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **Slice thickness:** <font color="#B00020">Δz=BW_RF/(γG_z)</font> - RF bandwidth.
 - **RF selectivity:** R=BW_RFT_RF - Longer pulse narrower BW.
 - **PD contrast:** C∝ρ_A-ρ_B - Long TR.
-- **Partial sat.:** C∝ρ_A(1-e^-TR/T_1A)-ρ_B(1-e^-TR/T_1B) - T1 weighting.
+- **Partial sat.:** C∝ρ<sub>A</sub>[1-exp(-TR/T<sub>1A</sub>)]-ρ<sub>B</sub>[1-exp(-TR/T<sub>1B</sub>)] - T1 weighting.
 - **Scan time:** T_scan≈N_phaseTR - One ky line per TR.
 
 ## Week 3 - Fast And Parallel Imaging
@@ -79,7 +79,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### Coil Encoding
 
-- **Coil signal:** s_γ(k)=∫ρ(x)c_γ(x)e^ikxdx - Sensitivity cγ.
+- **Coil signal:** s<sub>γ</sub>(k)=∫ρ(x)c<sub>γ</sub>(x) exp(ikx) dx - Sensitivity cγ.
 - **Matrix model:** <font color="#B00020">s = Eρ + η</font> - Encoding plus noise.
 - **Decode:** i = Fs - Reconstruction matrix.
 - **SENSE:** ρ̂=(E^HΨ^-1E)^-1E^HΨ^-1s - Optimum SNR inverse.
@@ -96,18 +96,18 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### Relaxation Contrast
 
-- **T1 recovery:** M_z(t)=M_0+[M_z(0)-M_0]e^-t/T_1 - Longitudinal.
-- **After 90°:** M_z(t)=M_0(1-e^-t/T_1) - Mz(0)=0.
-- **T2 decay:** M_xy(t)=M_xy(0)e^-t/T_2 - Spin-spin.
-- **T2* decay:** M_xy(t)=M_xy(0)e^-t/T_2* - GRE/FID.
+- **T1 recovery:** M<sub>z</sub>(t)=M<sub>0</sub>+[M<sub>z</sub>(0)-M<sub>0</sub>]exp(-t/T<sub>1</sub>) - Longitudinal.
+- **After 90°:** M<sub>z</sub>(t)=M<sub>0</sub>[1-exp(-t/T<sub>1</sub>)] - Mz(0)=0.
+- **T2 decay:** M<sub>xy</sub>(t)=M<sub>xy</sub>(0)exp(-t/T<sub>2</sub>) - Spin-spin.
+- **T2* decay:** M<sub>xy</sub>(t)=M<sub>xy</sub>(0)exp(-t/T<sub>2</sub>*) - GRE/FID.
 
 ### Common Signals
 
-- **Spin echo:** <font color="#B00020">S_SE∝ρ(1-e^-TR/T_1)e^-TE/T_2</font> - T1 by TR, T2 by TE.
-- **GRE:** S_GRE∝ρ sinα (1-E_1)/(1-E_1cosα)e^-TE/T_2* - E1=e^-TR/T1.
-- **Inversion:** M_z(TI)=M_0(1-2e^-TI/T_1) - TR >> T1.
-- **Null time:** <font color="#B00020">TI_null=T_1ln2</font> - Suppress tissue.
-- **Ernst:** <font color="#B00020">α_E=arccos(e^-TR/T_1)</font> - Max steady-state signal.
+- **Spin echo:** <font color="#B00020">S<sub>SE</sub>∝ρ[1-exp(-TR/T<sub>1</sub>)] exp(-TE/T<sub>2</sub>)</font> - T1 by TR, T2 by TE.
+- **GRE:** S<sub>GRE</sub>∝ρ sinα (1-E<sub>1</sub>)/(1-E<sub>1</sub>cosα) exp(-TE/T<sub>2</sub>*) - E1=exp(-TR/T1).
+- **Inversion:** M<sub>z</sub>(TI)=M<sub>0</sub>[1-2exp(-TI/T<sub>1</sub>)] - TR >> T1.
+- **Null time:** <font color="#B00020">TI<sub>null</sub> = T<sub>1</sub> ln2</font> - Suppress tissue.
+- **Ernst:** <font color="#B00020">α<sub>E</sub>=arccos[exp(-TR/T<sub>1</sub>)]</font> - Max steady-state signal.
 
 ### Weighting Rules
 
@@ -138,7 +138,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **Fourier:** Δx≈π/k_max - Sampling aperture.
 - **Relaxation blur:** k* = γGT_2* - Finite T2* filters k-space.
 - **Diffusion blur:** x^2≈6DT_acq - Long readouts blur.
-- **SoS combine:** I_SoS=√Σ_c|I_c|^2 - Magnitude coil combine.
+- **SoS combine:** I<sub>SoS</sub>=√(∑<sub>c</sub>|I<sub>c</sub>|<sup>2</sup>) - Magnitude coil combine.
 
 ## Week 6 - Flow Imaging
 
@@ -155,8 +155,8 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **Encoding:** <font color="#B00020">VENC=π/(γM_1)</font> - Phase reaches ±π.
 - **Velocity:** v=(Δφ/π)VENC - Phase difference map.
 - **Aliasing:** |v|>VENC ⇒ phase wraps - Set VENC high enough.
-- **Flow rate:** <font color="#B00020">Q=Σ v_iΔA_i</font> - Through-plane flow.
-- **Velocity distribution:** s(x,k_v)=Σρ(x,v)e^jk_vv - Generalized velocity encoding.
+- **Flow rate:** <font color="#B00020">Q=∑<sub>i</sub>v<sub>i</sub>ΔA<sub>i</sub></font> - Through-plane flow.
+- **Velocity distribution:** s(x,k<sub>v</sub>)=∑ρ(x,v) exp(jk<sub>v</sub>v) - Generalized velocity encoding.
 
 ### Hemodynamics
 
@@ -192,9 +192,9 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### BOLD/fMRI
 
-- **T2*:** 1/T_2*=1/T_2+γΔB - Static dephasing.
+- **T2*:** 1/T<sub>2</sub>*=1/T<sub>2</sub>+γΔB - Static dephasing.
 - **Susceptibility:** ΔB≈ΔχB_0 - Blood oxygenation effect.
-- **GRE BOLD:** S(TE)=S_0e^-TE/T_2* - TE near T2*.
+- **GRE BOLD:** S(TE)=S<sub>0</sub>exp(-TE/T<sub>2</sub>*) - TE near T2*.
 - **Small change:** <font color="#B00020">ΔS/S≈-TE·ΔR_2*</font> - R2*=1/T2*.
 
 ### Diffusion Physics
@@ -206,11 +206,11 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### DWI/DTI
 
-- **DWI signal:** <font color="#B00020">S(TE,b)=S_0e^-TE/T_2e^-bD</font> - Scalar diffusion.
+- **DWI signal:** <font color="#B00020">S(TE,b)=S<sub>0</sub> exp(-TE/T<sub>2</sub>) exp(-bD)</font> - Scalar diffusion.
 - **b-value:** <font color="#B00020">b=γ^2G^2δ^2(Δ-δ/3)</font> - PGSE sensitivity.
 - **Tensor:** ln(S/S_0)=-b g^TDg - Direction g.
 - **MD:** MD=(λ_1+λ_2+λ_3)/3 - Mean diffusivity.
-- **FA:** FA=√(3/2) √Σ(λ_i-MD)^2/√Σλ_i^2 - Anisotropy.
+- **FA:** FA=√(3/2) √∑(λ<sub>i</sub>-MD)<sup>2</sup>/√∑λ<sub>i</sub><sup>2</sup> - Anisotropy.
 
 ## Week 9 - Advanced Imaging
 
@@ -247,11 +247,11 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 ### Spectrum
 
-- **FID:** <font color="#B00020">s(t)=A e^-t/T_2*e^i2πν_At</font> - Single component.
+- **FID:** <font color="#B00020">s(t)=A exp(-t/T<sub>2</sub>*) exp(i2πν<sub>A</sub>t)</font> - Single component.
 - **Spectrum:** S(ν)=FT{s(t)} - Frequency-domain signal.
 - **Lorentzian:** Re S(ν) ∝ T_2* / [1+(2πT_2*(ν-ν_A))^2] - Line shape.
-- **Linewidth:** <font color="#B00020">FWHM=1/(πT_2*)</font> - Shorter T2* broader.
-- **Mixture:** s(t)=Σ_cw_ce^-t/T_2,c*e^i2πν_ct - Superposition.
+- **Linewidth:** <font color="#B00020">FWHM=1/(πT<sub>2</sub>*)</font> - Shorter T2* broader.
+- **Mixture:** s(t)=∑<sub>c</sub>w<sub>c</sub> exp(-t/T<sub>2,c</sub>*) exp(i2πν<sub>c</sub>t) - Superposition.
 
 ### Sampling And J
 
@@ -270,8 +270,8 @@ _Compact memorization formulas, two lectures per page in the PDF._
 - **Water/fat:** Δδ≈3.5 ppm - Water 4.7, fat 1.2 ppm.
 - **Phase accrual:** Δφ=2πΔντ - Chemical shift phase.
 - **Binomial spacing:** τ≈1/(2Δν) or 1/(4Δν) - Depends on target phase.
-- **Inversion recovery:** M_z(TI)=M_0(1-2e^-TI/T_1) - After 180°.
-- **Null:** <font color="#B00020">TI_null=T_1ln2</font> - Water/fat suppression.
+- **Inversion recovery:** M<sub>z</sub>(TI)=M<sub>0</sub>[1-2exp(-TI/T<sub>1</sub>)] - After 180°.
+- **Null:** <font color="#B00020">TI<sub>null</sub> = T<sub>1</sub> ln2</font> - Water/fat suppression.
 
 ### Localization
 
@@ -284,7 +284,7 @@ _Compact memorization formulas, two lectures per page in the PDF._
 
 - **Shift artifact:** <font color="#B00020">Δx=Δν_CS/(γG)</font> - Chemical shift displacement.
 - **Fractional shift:** Δx/Δx_RF=Δν_CS/BW_RF - Use large RF BW.
-- **CSI signal:** <font color="#B00020">s(k_x,k_y,t)=∭ρ(x,y,Δν)e^ik_xxe^ik_yye^i2πΔνtdxdydΔν</font> - 2 spatial + spectral.
+- **CSI signal:** <font color="#B00020">s(k<sub>x</sub>,k<sub>y</sub>,t)=∭ρ(x,y,Δν) exp[i(k<sub>x</sub>x+k<sub>y</sub>y+2πΔνt)] dxdydΔν</font> - 2 spatial + spectral.
 - **CSI recon:** S(x,y,Δν)=FT_tFT_kxFT_ky{s} - 3D transform.
 - **CSI scan time:** T_scan=N_xN_yTR·NSA - Slow phase encoding.
 - **High-field SNR:** U_sig∼B_0^2, U_noise∼B_0, SNR∼B_0 - Approximate.

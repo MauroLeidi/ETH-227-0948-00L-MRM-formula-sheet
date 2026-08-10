@@ -58,8 +58,8 @@ def markdown_formula_to_reportlab(text: str) -> str:
     for tag in ("sub", "sup"):
         text = text.replace(f"&lt;{tag}&gt;", f"<{tag}>")
         text = text.replace(f"&lt;/{tag}&gt;", f"</{tag}>")
-    text = re.sub(r"\^([A-Za-z0-9+\-*/().]+)", r"<sup>\1</sup>", text)
-    text = re.sub(r"_([A-Za-z0-9+\-*/().]+)", r"<sub>\1</sub>", text)
+    text = re.sub(r"\^(-?\d+|[A-Za-z])", r"<sup>\1</sup>", text)
+    text = re.sub(r"_([A-Za-z]+|\d+[A-Za-z]?)", r"<sub>\1</sub>", text)
     return text
 
 
@@ -190,8 +190,8 @@ def build_pdf(lectures, output_pdf: Path):
             "Formula",
             parent=base["Normal"],
             fontName="SheetRegular",
-            fontSize=5.9,
-            leading=6.9,
+            fontSize=5.75,
+            leading=6.8,
             textColor=colors.HexColor("#0E1719"),
         ),
         "Note": ParagraphStyle(
@@ -205,7 +205,7 @@ def build_pdf(lectures, output_pdf: Path):
     }
 
     story = []
-    col_widths = [col_w * 0.22, col_w * 0.52, col_w * 0.26]
+    col_widths = [col_w * 0.20, col_w * 0.58, col_w * 0.22]
 
     for idx, lecture in enumerate(lectures):
         if idx > 0:
